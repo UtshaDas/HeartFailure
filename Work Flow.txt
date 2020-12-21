@@ -1,0 +1,35 @@
+1. Data Normalization of Continious Attributes ( 0-1)
+2. Dataset Without Time Attribute
+3. Train(70%) Test(30%) Split 
+4. Feature Selection
+	a. RFE-RF
+		i. Top 2 Feature: ejection_fraction, serum_creatinine
+		Variables Accuracy  Kappa Selected
+                     1   0.6794 0.1384         
+                     2   0.7225 0.3313        *
+        
+        b. mRMR
+		Top 2 Features
+		Feature Name	Score
+		ejection_fraction 0.03760527
+		
+		serum_creatinine  0.01689575
+
+		 Attribute Index     score:
+		[1,]    3	0.037605275
+ 		[2,]    5	0.016895754
+ 		[3,]    1	0.013134613
+ 		[4,]    9	0.004090882
+		[5,]    2	0.002854237
+		[6,]    8	-0.001278114
+ 		[7,]    7	-0.001473184
+		[8,]    6	-0.001001121
+ 		[9,]    4	-0.002441136
+		[10,]   11	-0.002279581
+		[11,]   10	-0.014413065
+
+5. SVM (20 times)
+		Acc	SD	Sen	SD	Spe	SD	MCC	SD	F1	SD	AUC	SD
+      
+    ALL 
+    Selected

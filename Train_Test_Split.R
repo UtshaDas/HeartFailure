@@ -1,0 +1,10 @@
+rm(list=ls())
+data<-read.csv("F:/Thesis/DataMing+MachieLeaning/Heart_Failure/heart_failure_normalized_WO_time.csv")
+
+library(caTools)
+set.seed(131)
+split=sample.split(data$DEATH_EVENT,SplitRatio = 0.70)
+training=subset(data,split==TRUE)
+testing=subset(data,split==FALSE)
+write.csv(training,"F:/Thesis/DataMing+MachieLeaning/Heart_Failure/heart_failure_training_wo_time.csv")
+write.csv(testing,"F:/Thesis/DataMing+MachieLeaning/Heart_Failure/heart_failure_testing_wo_time.csv")
